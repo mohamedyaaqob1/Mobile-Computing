@@ -10,28 +10,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-    
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: Scaffold(
+        appBar:AppBar(
+          title: const Text(
+            'Birthday Card',
+          ),
+        ),
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Image(image: AssetImage(r'C:\Users\ms400\StudioProjects\app\image/pd.jpg')
+            ),
+            Text(
+              'Happy Birthday !!'
+            ),
+          ],
+        ),
+      )
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text("First Application"),
-      ),
-      body: Center(
-        child: Text(
-          "Mohamed sayed mohamed yaaqob",
-        
-        ),
-      ),
-    );
-  }
-}
